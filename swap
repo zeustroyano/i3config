@@ -1,0 +1,17 @@
+#!/bin/bash
+echo
+echo -e " ######  ##      ##    ###    ########  
+##    ## ##  ##  ##   ## ##   ##     ## 
+##       ##  ##  ##  ##   ##  ##     ## 
+ ######  ##  ##  ## ##     ## ########  
+      ## ##  ##  ## ######### ##        
+##    ## ##  ##  ## ##     ## ##        
+ ######   ###  ###  ##     ## ## "
+echo
+echo -e “Limpiando la caché~ “;
+
+sync ; echo 3 > /proc/sys/vm/drop_caches
+
+echo “Limpiando Swap~ “;
+
+swapoff -a && swapon -a
